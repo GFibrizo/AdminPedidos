@@ -1,4 +1,4 @@
-package dominio;
+package negocio.dominio;
 
 import java.io.Serializable;
 

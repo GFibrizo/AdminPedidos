@@ -1,6 +1,6 @@
 package datos.db_proxy;
 
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 
 /**
  * Created by fabrizio on 19/08/16.

@@ -5,7 +5,7 @@ import Tests.Mocks.MockDB;
 import datos.Repositorio;
 import datos.cache_proxy.CacheProxy;
 import datos.db_proxy.DBProxy;
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 import org.junit.Before;
 import org.junit.Test;
 

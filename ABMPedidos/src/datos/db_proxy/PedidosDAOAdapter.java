@@ -1,6 +1,6 @@
 package datos.db_proxy;
 
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 
 /**
  * Clase que "adapta" la interfaz de PedidosDAO para que implemente la interfaz DBProxy.
@@ -14,6 +14,7 @@ public class PedidosDAOAdapter implements DBProxy {
      * completa con el nuevo id).
      * @param pedido : la instancia de Pedido a ser ingresada a la base de datos.
      */
+    @Override
     public void insertOrUpdate(Pedido pedido) {
         PedidosDAO.insertOrUpdate(pedido);
     }
@@ -26,6 +27,7 @@ public class PedidosDAOAdapter implements DBProxy {
      * @param pedido : La instancia de pedido recibida, trae dentro el id del
      *               pedido que se desea eliminar.
      */
+    @Override
     public void delete(Pedido pedido) {
         PedidosDAO.delete(pedido);
     }
@@ -38,6 +40,7 @@ public class PedidosDAOAdapter implements DBProxy {
      * @param idPedido
      * @return el pedido correspondiente al id pasado por parametro.
      */
+    @Override
     public Pedido select(Integer idPedido) {
         return PedidosDAO.select(idPedido);
     }

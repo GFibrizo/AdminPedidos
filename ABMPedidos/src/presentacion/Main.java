@@ -1,11 +1,7 @@
 package presentacion;
 
-import datos.Repositorio;
-import datos.cache_proxy.BumexMemcachedAdapter;
-import datos.cache_proxy.CacheProxy;
-import datos.db_proxy.DBProxy;
-import datos.db_proxy.PedidosDAOAdapter;
-import dominio.Pedido;
+import negocio.dominio.Pedido;
+import negocio.AdministradorDePedidos;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,10 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DBProxy pedidosDB = new PedidosDAOAdapter();
-        CacheProxy pedidosCache = new BumexMemcachedAdapter();
-        Repositorio repositorio = new Repositorio(pedidosDB, pedidosCache);
-        AdministradorDePedidos administradorDePedidos = new AdministradorDePedidos(repositorio);
+        AdministradorDePedidos administradorDePedidos = Inicializador.inicializarAdministrador();
 
         mostrarAyuda();
         BufferedReader br = null;

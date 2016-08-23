@@ -1,7 +1,7 @@
 package Tests.Mocks;
 
 import datos.db_proxy.DBProxy;
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 
 import java.util.HashMap;
 import java.util.Map;

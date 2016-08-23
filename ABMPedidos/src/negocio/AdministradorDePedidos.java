@@ -1,7 +1,7 @@
-package presentacion;
+package negocio;
 
-import datos.Repositorio;
-import dominio.Pedido;
+import negocio.dominio.Pedido;
+import presentacion.Constantes;
 
 
 /**
@@ -10,7 +10,7 @@ import dominio.Pedido;
  */
 public class AdministradorDePedidos {
 
-    private Repositorio repositorio;
+    private RepositorioInterface repositorio;
 
     /**************************************************************************/
     /**************************************************************************/
@@ -19,7 +19,7 @@ public class AdministradorDePedidos {
      * Constructor de la clase AdministradorDePedidos
      * @param repo el repositorio que manejara los datos de los pedidos.
      */
-    public AdministradorDePedidos(Repositorio repo) {
+    public AdministradorDePedidos(RepositorioInterface repo) {
         repositorio = repo;
     }
 

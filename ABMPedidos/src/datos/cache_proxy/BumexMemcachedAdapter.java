@@ -15,6 +15,7 @@ public class BumexMemcachedAdapter implements CacheProxy{
      * @param key el id del pedido que se desea insertar.
      * @param value el pedido que se desea insertar.
      */
+    @Override
     public void set(Integer key, Object value) {
         BumexMemcached.set(key, value);
     }
@@ -28,6 +29,7 @@ public class BumexMemcachedAdapter implements CacheProxy{
      * @return el pedido buscado. Habra que castearlo a Pedido para acceder a
      * sus datos.
      */
+    @Override
     public Object get(Integer key) {
         return BumexMemcached.get(key);
     }
@@ -39,6 +41,7 @@ public class BumexMemcachedAdapter implements CacheProxy{
      * Elimina un pedido de la cache de pedidos.
      * @param key el id del pedido que se desea eliminar.
      */
+    @Override
     public  void delete(Integer key) {
         BumexMemcached.delete(key);
     }

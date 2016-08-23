@@ -1,6 +1,6 @@
 package datos.db_proxy;
 
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 
 /**
  * Interfaz que define las operaciones que podran realizar las clases concretas

@@ -1,6 +1,6 @@
 package presentacion;
 
-import dominio.Pedido;
+import negocio.dominio.Pedido;
 
 /**
  * Clase que contiene la logica de parseo de strings para obtener la operacion
