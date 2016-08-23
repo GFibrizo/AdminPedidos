@@ -7,7 +7,7 @@ En el presente proyecto, no solo se realizó lo pedido en el enunciado, sino que
 ## Arquitectura
 
 La arquitectura utilizada es una arquitectura de capas (Layers), algo similar a lo que se vé en la imagen.
-![layers](https://github.com/gfibrizo/adminpedidos/tree/master/recursos/layers.gif)
+![layers](https://github.com/GFibrizo/AdminPedidos/blob/master/recursos/layers.gif)
 
 De esta manera, las capas pueden evolucionar independientemente una de la otra. 
 
@@ -23,7 +23,7 @@ La capa de presentación tiene una clase Inicializador que se encarga de instanc
 Se puede ver en la siguiente imagen un ejemplo este concepto de periferia y centro de una aplicación. Si bien hay algunas cosas de más en la imagen, el concepto se puede apreciar.
 
 
-![arquitectura limpia](https://github.com/gfibrizo/adminpedidos/tree/master/resources/clean1.png)
+![arquitectura limpia](https://github.com/GFibrizo/AdminPedidos/blob/master/recursos/clean1.png)
 
 
 ## Tests con JUnit
