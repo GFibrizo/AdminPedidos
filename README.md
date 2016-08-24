@@ -39,6 +39,20 @@ Para realizar los tests, se realizaron clases Mock que simulan el acceso a una B
 - La clase BumexMemcached realizar operaciones contra una Cache, y en este caso, es usada para ahorrar operaciones que de otra manera se realizarian contra la base de datos.
 
 
+## Consideraciones a tomar si la tabla Pedidos tiene muchos registros
+
+En dicho caso, se derian tomar los siguientes recaudos:
+
+- Tratar de maximizar la cantidad de consultas que pueden ser resueltas por la Cache. Esto ahorra mucho tiempo que de otro modo se iría en resolver la consulta yendo a buscar los datos a la base de datos. Para esto, habría que regular las siguientes variables:
+
+  - Tamaño de la caché.
+  - Politica de sustitución (LRU, FIFO).
+  - Tipo de cache utilizado (de mapeo directo o asociativo).
+  - Politicas de escritura (WB/WA o WT/WNA).
+
+- Utilizar un tipo de base de datos que este preparado para realizar consultas de manera eficiente en grandes volumenes de datos, alguna base de datos NoSql como la basada en documentos podría servir.
+
+
 ## Observaciones al enunciado
 
 - Los nombres de variables, funciones, entidades y campos de la base de datos estan en idiomas diferentes. Deberían estar en el mismo idioma.
